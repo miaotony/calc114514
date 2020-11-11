@@ -1,0 +1,11 @@
+{
+	"version": 2,
+	"routes": [{
+		"headers": {
+			"Access-Control-Allow-Origin": "*"
+		},
+		"src": "/api(.*)",
+		"dest": "api/main.py",
+		"continue": true
+	}]
+}
