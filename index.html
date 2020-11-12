@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/bootstrap.css">
+    <link rel="stylesheet" href="static/main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>114514 数字论证器</title>
+</head>
+
+<body class="text-center">
+    <div id="app" class="form-getflag">
+        <h1>114514<br />
+            数字论证器</h1>
+
+        <div class="alert alert-success" role="alert" style="display: none;">
+            你论证的 <span id="num">0</span>：<br />
+            <b><code id="result"></code></b>
+        </div>
+        <div class="alert alert-danger" role="alert" style="display: none;">
+            <b id="errMsg"></b>
+        </div>
+
+        <p>你想论证的数字：<span id="show">0</span></p>
+        <input type="range" id="number" name="number" class="form-control" value="114514" min="0" max="999999" step="1">
+        <input type="submit" class="btn btn-lg btn-primary btn-block" id="submit" value="开始论证">
+    </div>
+    <script src="static/jquery.js"></script>
+    <script src="static/bootstrap.js"></script>
+
+    <script type="text/javascript">
+        var prevVal = 0;
+        $(document).ready(function () {
+            $("#show").text($('#number')[0].value);
+            $('#number').on('input', function () {
+                $("#show").text($('#number')[0].value.toString());
+                prevVal = $('#number')[0].value;
+            });
+        });
+
+        function getAnswer() {
+            const number = $('#number')[0].value;
+            // const url = 'https://calc114514.vercel.app/api/calc?isJson=1&num=' + number; // development
+            const url = '/api/calc?isJson=1&num=' + number; // production
+            $.ajax({
+                url: url,
+                dataType: "json",
+                async: true,
+                type: "GET",
+                success: function (data) {
+                    // console.log(data);
+                    if (data.number === "114514") {
+                        $('#num').text("恶臭的 " + data.number);
+                    } else {
+                        $('#num').text(data.number);
+                    }
+                    $('#result').text(data.answer);
+                    $('.alert.alert-danger').hide();
+                    $('.alert.alert-success').show();
+                },
+                error: function (e) {
+                    console.log(e);
+                    $('#errMsg').text("发生错误，请重试！");
+                    $('.alert.alert-success').hide();
+                    $('.alert.alert-danger').show();
+                }
+            });
+        }
+
+        $("#submit").click(function (data) {
+            getAnswer();
+        });
+    </script>
+
+</body>
+
+</html>
