@@ -8,6 +8,7 @@ body {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  flex-direction: column;
   padding-top: 40px;
   padding-bottom: 40px;
   background-image: url('./bg.png');
@@ -22,19 +23,19 @@ body {
 }
 
 .form-getflag h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form-getflag .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 10px;
-    font-size: 16px;
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .form-getflag input[type="range"] {
-    margin-bottom: 10px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
