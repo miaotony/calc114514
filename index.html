@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="static/main.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>114514 数字论证器</title>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?47516ef10e1035e05f66d1923d3b4ae1";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 
 <body class="text-center">
@@ -23,7 +32,7 @@
             <b id="errMsg"></b>
         </div>
 
-        <p>你想论证的数字：<span id="show">0</span></p>
+        <p>你想论证的数字：<input type="text" size="12" maxlength="6" id="show"></input></p>
         <input type="range" id="number" name="number" class="form-control" value="114514" min="0" max="999999" step="1">
         <input type="submit" class="btn btn-lg btn-primary btn-block" id="submit" value="开始论证">
     </div>
@@ -33,10 +42,14 @@
     <script type="text/javascript">
         var prevVal = 0;
         $(document).ready(function () {
-            $("#show").text($('#number')[0].value);
+            $("#show").val($('#number')[0].value);
             $('#number').on('input', function () {
-                $("#show").text($('#number')[0].value.toString());
+                $("#show").val($('#number')[0].value.toString());
                 prevVal = $('#number')[0].value;
+            });
+            $('#show').on('input', function () {
+                $("#number").val($('#show')[0].value.toString());
+                prevVal = $('#show')[0].value;
             });
         });
 
