@@ -22,7 +22,7 @@ Calculate a number with `114514` &amp; some operators.
 
 **重要性质：**
 
-`-~x == x+1`
+`-~x == x+1`  
 `~-x == x-1` 对于任意 `x` 都成立。
 
 > 一个办法就是**按照十进制的方式来凑**，即 `given_number = (((((((0+a)*10+b)*10+c)*10+d)*10)+e)*10)+f` ，其中 `a b c d e f` 为 0 到 9 之间的整数。表达式中的值 `0 10 10 10 10 10` 可以分别利用 `1 1 4 5 1 4` 与嵌套 `~-` 来凑出，而 `+a +b +c +d +e +f` 可以直接利用嵌套 `~-` 来实现（不需要使用数字）。
@@ -125,7 +125,7 @@ bot 采用 Webhook 方式处理发来的消息。
 **The relevant technical content of this project is only for study and research, please use within the reasonable and legal scope!**
 
 **License:**
-[GNU Affero General Public License v3.0](https://github.com/miaotony/NUAA_LibraryFlow/blob/master/LICENSE)
+[GNU Affero General Public License v3.0](https://github.com/miaotony/calc114514/blob/master/LICENSE)
 
 最终解释权归本项目开发者所有。
 The final interpretation right belongs to the developer of the project.
