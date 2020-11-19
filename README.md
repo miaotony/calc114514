@@ -118,6 +118,12 @@ bot 采用 Webhook 方式处理发来的消息。
 直接用 CLI 上传即可。
 
 
+## Blog
+
+**部署笔记：**  
+
+[基于 Vercel Serverless 部署 Calc114514 API & Telegram bot | MiaoTony's 小窝](https://miaotony.xyz/2020/11/18/Server_Vercel_Calc114514/?from=GitHub)
+
 
 ## Copyright
 
