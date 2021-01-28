@@ -127,14 +127,14 @@ bot 采用 Webhook 方式处理发来的消息。
 
 ## Copyright
 
-**本项目相关技术内容仅供学习研究，请在合理合法范围内使用！**
+**本项目相关技术内容仅供学习研究，请在合理合法范围内使用！**  
 **The relevant technical content of this project is only for study and research, please use within the reasonable and legal scope!**
 
 **License:**
 [GNU Affero General Public License v3.0](https://github.com/miaotony/calc114514/blob/master/LICENSE)
 
-最终解释权归本项目开发者所有。
+最终解释权归本项目开发者所有。  
 The final interpretation right belongs to the developer of the project.
 
-Copyright © 2020 [MiaoTony](https://github.com/miaotony).
+Copyright © 2020-2021 [MiaoTony](https://github.com/miaotony).
 
