@@ -61,8 +61,11 @@
 
         function getAnswer() {
             const number = $('#number')[0].value;
-            // const url = 'https://calc114514.vercel.app/api/calc?isJson=1&num=' + number; // development
-            const url = '/api/calc?isJson=1&num=' + number; // production
+            const host = window.location.host;
+            let url = 'https://calc114514.vercel.app/api/calc?isJson=1&num=' + number;
+            if (host.endsWith("vercel.app")) {
+                url = '/api/calc?isJson=1&num=' + number;
+            }
             $.ajax({
                 url: url,
                 dataType: "json",
