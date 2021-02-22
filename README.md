@@ -43,6 +43,10 @@ Calculate a number with `114514` &amp; some operators.
 
 详见： [https://calc114514.vercel.app/](https://calc114514.vercel.app/?from=GitHub)
 
+另外也部署到了 CloudFlare Pages:  
+
+[https://114514.pages.dev/](https://114514.pages.dev/?from=GitHub)
+
 ![](img/image-20201112225921026.png)
 
 ![](img/image-20201112225938571.png)
