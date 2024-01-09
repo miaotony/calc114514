@@ -140,5 +140,5 @@ bot 采用 Webhook 方式处理发来的消息。
 最终解释权归本项目开发者所有。  
 The final interpretation right belongs to the developer of the project.
 
-Copyright © 2020-2023 [MiaoTony](https://github.com/miaotony).
+Copyright © 2020-2024 [MiaoTony](https://github.com/miaotony).
 
